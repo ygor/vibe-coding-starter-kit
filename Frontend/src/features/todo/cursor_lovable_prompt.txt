@@ -1,0 +1,6 @@
+Generate a Lovable screen component called CreateTodo.
+- Use useLovableRoute and useAction to handle form submission
+- Use Zod for input validation
+- Call the createTodo API function
+- Display validation errors inline
+- Align with RTL principles: secure input handling, clear separation of concerns, and observability

@@ -1,0 +1,28 @@
+You are reviewing C# backend and TypeScript/React frontend code against the RTL Engineering Principles. The key principles are:
+
+1. **Secure by Default**
+   - C#: No hardcoded secrets, validate all inputs (e.g., with Data Annotations or FluentValidation), follow least privilege (e.g., scoped DbContexts, limited claims).
+   - TypeScript/React: Sanitize user input, escape output (e.g., when using `dangerouslySetInnerHTML`), prevent XSS and CSRF.
+
+2. **Observable and Measurable**
+   - C#: Use structured logging (e.g., Serilog), include correlation IDs, capture exceptions with context.
+   - TypeScript/React: Log client-side errors, track performance metrics (e.g., using web-vitals), use tools like Sentry or OpenTelemetry.
+
+3. **AI-Ready and Evolvable**
+   - C#: Follow clean architecture and vertical slice pattern, avoid static dependencies, use clear contracts (DTOs, versioned APIs).
+   - TypeScript/React: Use functional components, clearly separate concerns (data fetching, state, rendering), avoid tight coupling to third-party libraries.
+
+4. **Simplicity over Cleverness**
+   - C#: Prefer clear LINQ expressions, no unnecessary patterns or abstractions.
+   - TypeScript/React: Avoid overly abstract hooks/components, prefer clarity over reusability when not needed.
+
+5. **Decoupled and Domain-Aligned**
+   - C#: Use DDD practices (aggregates, value objects), define clear boundaries between application and domain layers.
+   - TypeScript/React: Keep domain logic outside UI components, respect boundaries between UI state and business logic.
+
+Please review the following code or diff and identify:
+- Which principles are upheld
+- Any violations or risks
+- Suggestions for improvement aligned with these principles
+
+[Paste your code or diff below this line]
