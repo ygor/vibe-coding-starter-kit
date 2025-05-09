@@ -1,97 +1,85 @@
-# RTL Vibe Coding Starter Kit (with Lovable)
+# RTL Vibe Coding Starter Kit (Lovable + Cursor)
 
 This starter kit enables fast, AI-assisted, principle-aligned development using:
 - **C# (backend)** with Clean Architecture & Vertical Slices
-- **TypeScript/React (frontend)** using **Lovable**
+- **Lovable (frontend)** on top of React
 - **Zod** for validation
-- **Cursor** for flow-based coding with AI
-- **DevContainers** for zero-setup environments
-- **AI prompts and engineering principles** built-in
+- **Cursor IDE** for AI-native development
+- **Built-in engineering principles and AI prompt helpers**
 
 ---
 
 ## 🚀 Getting Started
 
 ### 1. Prerequisites
-- VS Code with the **Dev Containers** extension
-- GitHub Codespaces (optional)
+- [Cursor IDE](https://cursor.sh)
 - Node.js 20+
 - .NET SDK 8.0
 
 ---
 
-### 2. Setup in VS Code (with DevContainer)
+### 2. Setup
 
 ```bash
-git clone <this-repo>
+git clone <your-repo-url>
 cd rtl-vibe-coding-starter
-code .
 ```
 
-When prompted, **"Reopen in Container"**.
-
-This installs:
-- .NET SDK
-- Node.js
-- ESLint, Prettier, C# and TypeScript extensions
+Open this folder in **Cursor**.
 
 ---
 
-### 3. Frontend (Lovable) Structure
+### 3. Using the Starter
 
+#### Frontend (Lovable)
 Located in: `Frontend/src/features/todo/`
 
 Files:
-- `CreateTodo.lovable.tsx` – Main screen using `useLovableRoute` and `useAction`
-- `createTodo.schema.ts` – Zod schema for validation
-- `createTodo.api.ts` – API call
-- `CreateTodo.test.tsx` – Example test
+- `CreateTodo.lovable.tsx` – Lovable screen using `useAction`
+- `createTodo.schema.ts` – Input validation (Zod)
+- `createTodo.api.ts` – API abstraction
+- `CreateTodo.test.tsx` – Test using React Testing Library
 - `ErrorBoundary.tsx` – Custom error boundary
 
----
-
-### 4. Backend (C#) Structure
-
+#### Backend (C#)
 Located in: `Backend/Features/Todo/`
 
 Files:
-- `CreateTodo.cs` – Handler
+- `CreateTodo.cs` – Handler logic
 - `CreateTodoValidator.cs` – Input validation
 - `TodoDomainModel.cs` – Domain logic
-- `CreateTodoTests.cs` – xUnit test example
+- `CreateTodoTests.cs` – Example unit test (xUnit)
 
 ---
 
-## 🤖 Using Cursor AI
+## 🧠 Cursor AI Usage
 
-### Prompt Examples
-
-- Generate a new Lovable screen:
+### Prompt Suggestions
+- Generate a Lovable screen:
   ```
-  Create a Lovable screen component called CreateTodo.
-  Use useAction with a Zod schema. Submit using createTodo API.
-  Align with RTL principles: validation, observability, simplicity.
+  Create a Lovable screen for CreateTodo.
+  Use useAction with Zod. Submit via createTodo API. Align with principles.
   ```
 
-- Backend slice:
+- Review code:
   ```
-  Generate a vertical slice in C# for CreateTodo using Clean Architecture.
-  Add validation, logging, and test it with xUnit.
+  Review this code for RTL’s engineering principles: security, observability, simplicity, and domain alignment.
   ```
+
+### Autoloaded Context
+Cursor will automatically load:
+- `rtl-engineering-principles.md`
+- `cursor_ai_review_prompt_csharp_ts.txt`
+
+These files are defined in `.cursor-context.json`.
 
 ---
 
 ## ✅ Pull Request Checklist
 
-When submitting code:
-- Follow [rtl-engineering-principles.md](../rtl-engineering-principles.md)
-- Run all tests (C# + React)
-- Include meaningful logs and error handling
-- Keep code readable and domain-aligned
+- Follow [rtl-engineering-principles.md](./rtl-engineering-principles.md)
+- Run all tests
+- Provide meaningful logs and observability
+- Ensure domain logic is aligned and decoupled
 
----
-
-For questions, ask Cursor:
-> "Review this code for RTL’s principles: Secure by Default, Observable, Domain-Aligned."
-
-Enjoy the vibe. 🎧
+Enjoy the vibe 🎧
